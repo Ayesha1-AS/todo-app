@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Tasks</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<aside class="side"><div class="logo">TD</div></aside>
+<main>
+  <h1>My Tasks</h1>
+  <nav class="tabs" id="tabs">
+    <button data-f="" class="on">All Tasks</button>
+    <button data-f="Pending">Pending</button>
+    <button data-f="Completed">Completed</button>
+    <button data-f="overdue">Overdue</button>
+  </nav>
+  <div class="bar">
+    <input id="search" type="search" placeholder="Search tasks" aria-label="Search tasks">
+    <button class="primary" id="new">+ Create New Task</button>
+  </div>
+  <div class="table" id="list"></div>
+</main>
+
+<dialog id="dlg">
+  <form id="form" novalidate>
+    <h2 id="dlgTitle">New task</h2>
+    <label>Title<input id="title"><small class="err" id="e-title"></small></label>
+    <label>Description<textarea id="desc" rows="3"></textarea></label>
+    <div class="two">
+      <label>Deadline<input type="date" id="deadline"><small class="err" id="e-deadline"></small></label>
+      <label>Priority<select id="priority"><option>Low</option><option selected>Medium</option><option>High</option></select></label>
+    </div>
+    <div class="actions"><button type="button" id="cancel">Cancel</button><button class="primary" type="submit">Save task</button></div>
+  </form>
+</dialog>
+<div id="toast" role="status"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
