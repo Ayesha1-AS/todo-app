@@ -9,12 +9,12 @@
 ## REST API
 | Method | Endpoint | Purpose |
 |---|---|---|
-| GET | /api/tasks?status=&search=&overdue=1 | List / filter / search |
-| GET | /api/tasks/<id> | Single task |
-| POST | /api/tasks | Create (title required) |
-| PUT | /api/tasks/<id> | Update task details |
-| PATCH | /api/tasks/<id> | Change status `{"status":"Completed"}` |
-| DELETE | /api/tasks/<id> | Delete |
+| GET | `/api/tasks?status=&search=&overdue=1` | List / filter / search |
+| GET | `/api/tasks/<id>` | Single task |
+| POST | `/api/tasks` | Create (title required) |
+| PUT | `/api/tasks/<id>` | Update task details |
+| PATCH | `/api/tasks/<id>` | Change status `{"status":"Completed"}` |
+| DELETE | `/api/tasks/<id>` | Delete |
 
 ## Deploy on Render
 1. Push this folder to GitHub.
